@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(255, 209, 220);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 100px); /* Các hàng có chiều cao bằng nhau */
+            width: 600px;
+            background-color: rgb(0, 58, 0);
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 58, 0);
+        }
+
+        .row-separator {
+            height: 3px;
+            background-color: white;
+            grid-column: 1 / span 3;
+        }
+
+        .item-1 {
+            grid-column: 1 / span 3;
+        }
+
+        .item-5 {
+            grid-column: 3 / span 1;
+        }
+
+        .item-9 {
+            grid-column: 1 / span 1;
+        }
+
+        .empty {
+            background-color: rgb(0, 58, 0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item item-1">1</div>
+        <div class="row-separator"></div>
+
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="row-separator"></div>
+
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="grid-item item-5">5</div>
+        <div class="row-separator"></div>
+
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="row-separator"></div>
+
+        <div class="grid-item item-9">9</div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+    </div>
+
+</body>
+</html>
